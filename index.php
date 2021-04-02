@@ -1,10 +1,4 @@
-!<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Notes App</title>
-  </head>
-  <body>
+<?php include 'header.php';?>
     <header>
       <nav>
         <div class="brand">
@@ -21,7 +15,13 @@
       </nav>
     </header>
     <main>
-      <h1>Online Notes App</h1>
+      <div class="left-main">
+        &nbsp;
+      </div>
+      <div class="right-main">
+        <h1>Online Notes App</h1>
+        <h3>Create your notes!</h3>
+        <a href="register.php">Register</a>
+      </div>
     </main>
-  </body>
-</html>
+<?php include 'footer.php';?>
