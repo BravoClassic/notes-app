@@ -1,19 +1,4 @@
 <?php include 'header.php';?>
-    <header>
-      <nav>
-        <div class="brand">
-          <a href="#"><img src="#" alt="brand logo"></a>
-        </div>
-        <ul>
-          <a href="#">
-            <li>Home</li>
-          </a>
-          <a href="#">
-            <li>Login</li>
-          </a>
-        </ul>
-      </nav>
-    </header>
     <main>
       <div class="left-main">
         &nbsp;

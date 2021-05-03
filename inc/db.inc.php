@@ -8,6 +8,6 @@ $dbName="notes-app-db";
 $conn = mysqli_connect($serverName,$user,$password,$dbName);
 
 //Check for errors in connection
-if(!$con){
+if(!$conn){
     die("Connection failed:". mysqli_connect_error());
-}echo "Connected successfully";
+}
