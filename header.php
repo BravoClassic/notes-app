@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Notes App</title>
   </head>
   <body>
