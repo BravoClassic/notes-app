@@ -9,14 +9,14 @@
     <header>
       <nav>
         <div class="brand">
-          <a href="index.php"><img src="#" alt="brand logo"></a>
+          <a href="index.php"><img src="assets/logo.png" alt="brand logo"></a>
         </div>
         <ul>
-          <a href="index.php">
+          <a href="#">
             <li>Home</li>
           </a>
-          <a href="login.php">
-            <li>Login</li>
+          <a href="#">
+            <li>Login/Register</li>
           </a>
         </ul>
       </nav>
