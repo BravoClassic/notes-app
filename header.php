@@ -15,7 +15,7 @@
           <a href="#">
             <li>Home</li>
           </a>
-          <a href="#">
+          <a href="#" class="regLog">
             <li>Login/Register</li>
           </a>
         </ul>

@@ -1,62 +1,205 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-html{
-    margin: 0;
-    padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
-body{
-    margin:0;
-    padding:0;
-    font-family: 'Lato', sans-serif;
-    box-sizing: border-box;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-a{
-    color:initial;
-    text-decoration:none;
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.active {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.display {
+  display: flex !important;
 }
 
 /* Header section */
-header{
-    width: 100%;
-    height: 50px;
+header {
+  width: 100%;
+  height: 50px;
+  position: absolute;
 }
 
-header nav{
-    height: 50px;
-    display:flex;
-    padding: 0 1em 0 1em;
-    background-color:#333;
-    justify-content: space-between;
+header nav {
+  height: 50px;
+  display: flex;
+  padding: 0 1em 0 1em;
+  justify-content: space-between;
 }
 
-.brand a img{
-    width:60px;
-    height: 80px;
+.brand a img {
+  width: 60px;
+  height: 80px;
 }
 
-header nav ul{
-    display:flex;
-    margin: 0;
-    padding: 0;
-    flex-direction:row;
-    list-style:none;
-    width: 30%;
-    justify-content:flex-end;
-    align-items: center;
+header nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+  list-style: none;
+  width: 30%;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-header nav ul a{
-    height:100%;
-    width: 120px;
-    background-color: #fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+header nav ul a {
+  height: 100%;
+  width: 120px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-header nav ul a:first-child{
-    margin-right: 1em;
+header nav ul a:first-child {
+  margin-right: 1em;
 }
 
-header nav ul a:last-child{
-    margin-left:1em;
+header nav ul a:last-child {
+  margin-left: 1em;
+}
+
+/* Main section */
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+main .right-main {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+main h1,
+main h3 {
+  text-shadow: 1px 1px 17px rgb(10, 10, 10);
+}
+
+main .right-main a {
+  margin-top: 10px;
+  padding: 1em;
+  background-color: #fff;
+}
+
+/* Modal section */
+.modal-overlay {
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  -webkit-transition: all 0.5s 0.5s ease;
+  -moz-transition: all 0.5s 0.5s ease;
+  -o-transition: all 0.5s 0.5s ease;
+  transition: all 0.5s 0.5s ease;
+}
+
+.modal-overlay span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor:pointer
+}
+
+.modal {
+  width: 40%;
+  background-color: #fff;
+  -webkit-transition: all 0.5s 0.1s ease;
+  -moz-transition: all 0.5s 0.1s ease;
+  -o-transition: all 0.5s 0.1s ease;
+  transition: all 0.5s 0.1s ease;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.modal .form-options {
+  width: 100%;
+  height: 60px;
+  display: flex;
+}
+
+.modal .form-options button {
+  width: 50%;
+  height: 100%;
+  background-color: #000;
+  border: none;
+  padding: 0;
+  color: #fff;
+}
+
+.register,
+.login {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.register .name-input {
+  display: flex;
+}
+
+.register .name-input input:first-child,
+.register .name-input input:last-child {
+  width: 50%;
+}
+
+.register input,
+.login input {
+  height: 50px;
+  border: none;
+}
+
+.register input:hover {
+  outline: transparent;
+}
+
+.error {
+  background-color: #ff9898;
+  color: #ff000f;
+  padding: 1em;
+  display: none;
 }
