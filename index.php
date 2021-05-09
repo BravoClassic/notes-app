@@ -1,5 +1,5 @@
 <?php include 'header.php';?>
-    <main>
+    <main class="main-content">
       <div class="right-main">
         <h1>Online Notes App</h1>
         <h3>Create your notes!</h3>

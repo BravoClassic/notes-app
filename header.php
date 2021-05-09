@@ -6,7 +6,7 @@
     <title>Notes App</title>
   </head>
   <body>
-    <header>
+    <header class="header-content">
       <nav>
         <div class="brand">
           <a href="index.php"><img src="assets/logo.png" alt="brand logo"></a>

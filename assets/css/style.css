@@ -1,15 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 
-
-html {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
+  display: flex;
 }
-body {
+* {
   margin: 0;
   padding: 0;
+}
+body {
   font-family: "Lato", sans-serif;
   box-sizing: border-box;
   background-size: cover;
@@ -18,6 +21,7 @@ body {
 a {
   color: initial;
   text-decoration: none;
+  display: block;
 }
 
 button {
@@ -33,14 +37,18 @@ button {
   display: flex !important;
 }
 
+.hidden{
+  display: none !important;
+}
+
 /* Header section */
-header {
+.header-content {
   width: 100%;
   height: 50px;
   position: absolute;
 }
 
-header nav {
+.header-content nav {
   height: 50px;
   display: flex;
   padding: 0 1em 0 1em;
@@ -52,7 +60,7 @@ header nav {
   height: 80px;
 }
 
-header nav ul {
+.header-content nav ul {
   display: flex;
   margin: 0;
   padding: 0;
@@ -63,7 +71,7 @@ header nav ul {
   align-items: center;
 }
 
-header nav ul a {
+.header-content nav ul a {
   height: 100%;
   width: 120px;
   background-color: #fff;
@@ -72,16 +80,16 @@ header nav ul a {
   align-items: center;
 }
 
-header nav ul a:first-child {
+.header-content nav ul a:first-child {
   margin-right: 1em;
 }
 
-header nav ul a:last-child {
+.header-content nav ul a:last-child {
   margin-left: 1em;
 }
 
-/* Main section */
-main {
+/* main section */
+.main-content {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -90,18 +98,18 @@ main {
   color: #fff;
 }
 
-main .right-main {
+.main-content .right-main {
   display: flex;
   flex-direction: column;
   align-items: start;
 }
 
-main h1,
-main h3 {
+.main-content h1,
+.main-content h3 {
   text-shadow: 1px 1px 17px rgb(10, 10, 10);
 }
 
-main .right-main a {
+.main-content .right-main a {
   margin-top: 10px;
   padding: 1em;
   background-color: #fff;
@@ -137,7 +145,7 @@ main .right-main a {
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor:pointer
+  cursor: pointer;
 }
 
 .modal {
@@ -202,4 +210,109 @@ main .right-main a {
   color: #ff000f;
   padding: 1em;
   display: none;
+}
+
+/* app main section  */
+
+.container {
+  display: flex;
+  position: relative;
+  width: 80%;
+  height: 100vh;
+  background-color: #111;
+  color: #eee;
+}
+
+.header-app-nav {
+  width: 20%;
+  background-color: #333;
+  color: #eee;
+  height: 100vh;
+  font-weight: 800;
+}
+.container .search-bar {
+  height: min-content;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.container .create-view-note {
+  width: 100%;
+}
+
+.container .create-view-note .create-edit-note,
+.container .create-view-note .note-list {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.container .create-view-note .create-edit-note .create-edit-form {
+  height: 100vh;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .create-view-note .create-edit-note .create-edit-form input,
+.container .create-view-note .create-edit-note .create-edit-form textarea {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  color: #eee;
+  padding: 0.5em;
+  margin-bottom: 0.3em;
+}
+.container
+  .create-view-note
+  .create-edit-note
+  .create-edit-form
+  input[type="submit"] {
+  width: 30%;
+  border-radius: 10px;
+  padding: 1em;
+  background-color: #fff;
+  color: #000;
+}
+
+.container
+  .create-view-note
+  .create-edit-note
+  .create-edit-form
+  input:first-child {
+  font-size: 30px;
+}
+.container .create-view-note .create-edit-note .create-edit-form textarea {
+  font-size: 22px;
+  resize: none;
+}
+
+.container .create-view-note .create-edit-note .create-edit-form textarea {
+  height: 70vh;
+}
+
+
+/* Navigation Section */
+
+nav .nav-links {
+  list-style: none;
+}
+
+nav .nav-links a li {
+  height: 70px;
+  width: 100%;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+nav .nav-links a li:hover {
+  background-color: #fff;
+  color: #000;
 }
