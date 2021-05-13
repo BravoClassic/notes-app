@@ -233,12 +233,15 @@ button {
 .container .search-bar {
   height: min-content;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .container .create-view-note {
   width: 100%;
+  display:flex;
+  align-items: center;
 }
 
 .container .create-view-note .create-edit-note,
@@ -249,7 +252,11 @@ button {
   justify-content: center;
 }
 
-.container .create-view-note .create-edit-note .create-edit-form {
+.container .create-view-note .note-list {
+  height: 65vh
+}
+
+.container .create-view-note .create-edit-note .create-edit-form{
   height: 100vh;
   width: 70%;
   display: flex;
@@ -295,6 +302,33 @@ button {
   height: 70vh;
 }
 
+.note-list .note-list-items{
+  list-style: none;
+  overflow-y: scroll;
+  width:100%;
+}
+
+.note-list .note-list-items a{
+  margin-bottom: 0.5em;
+  color: #fff;
+  padding: 0 0.5em 0 0.5em
+}
+
+.note-list .note-list-items a:hover{
+  background-color: #fff;
+  color: #000 !important;
+}
+
+.note-list .note-list-items a li{
+  color: inherit;
+}
+.note-list .note-list-items a li h1{
+  font-size: 30px;
+}
+
+.note-list .note-list-items a li p{
+  font-size: 24px;
+}
 
 /* Navigation Section */
 
