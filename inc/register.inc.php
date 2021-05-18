@@ -1,43 +1,29 @@
 <?php
+session_start();
+include_once 'db.inc.php';
+include 'functions.inc.php';
 
-require_once 'db.inc.php';
-require_once 'functions.inc.php';
 
-if ($_isset($_POST["submit"])) {
-  // code...
-  $fname = $_POST["fname"];
-  $lname = $_POST["lname"];
-  $email =$_POST["email"];
-  $pwd= $_POST["password"];
-  $pwd2 = $_POST["password2"];
+// code...
+$fname = mysqli_real_escape_string($conn, $_POST["fname"]);
+$lname = mysqli_real_escape_string($conn, $_POST["lname"]);
+$email = mysqli_real_escape_string($conn, $_POST["email"]);
+$pwd = mysqli_real_escape_string($conn, $_POST["pwd"]);
 
-  $checkFieldsRegister = emptyInputRegister($fname,$lname,$email,$pwd,$pwd2);
-  $validateEmail = invalidEmail($email);
-  $pwdNotMatching= pwdNotMatch($pwd,$pwd2);
-  $userExists = uidExists($conn,$email);
-  if ($checkFieldsRegister) {
-    // code...
-    header("location: ../register.php?error=emptyFields");
-    exit();
+if (!empty($fname) || !empty($lname) || !empty($email) || !empty($pwd)) {
+  if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    if (!empty($pwd)) {
+      if(!emailExists($conn, $email)) {
+        register($conn, $fname, $lname, $email, $pwd);
+      }else{
+        echo 'Email already exists! Register with a new email.';
+      }
+    } else {
+      echo "Enter a password!";
+    }
+  } else {
+    echo "Enter a valid email address!";
   }
-
-  if ($validateEmail) {
-    // code...
-    header("location: ../register.php?error=invalidEmail");
-    exit();
-  }
-
-  if ($pwdNotMatching) {
-    // code...
-    header("location: ../register.php?error=pwdNotMatching");
-    exit();
-  }
-  if ($userExists) {
-    // code...
-    header("location: ../register.php?error=userExists");
-    exit();
-  }
-
-  register($conn,$fname,$lname,$email,$pwd);
-
+} else {
+  echo "Empty field(s). Enter valid data!";
 }

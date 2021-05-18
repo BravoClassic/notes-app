@@ -1,5 +1,5 @@
 <?php
-$serverName ="localhost";
+$serverName ="localhost";//servername
 $user="root";
 $password="brav123";
 $dbName="notes-app-db";

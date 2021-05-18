@@ -11,7 +11,7 @@
   <header class="header-app-nav">
     <nav>
       <div class="brand">
-        <!-- <a href="index.php"><img src="assets/logo.png" alt="brand logo"></a> -->
+        <a href="index.php"><img src="assets/logo.png" alt="brand logo"></a>
         <span>Menu</span>
       </div>
       <ul class="nav-links">

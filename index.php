@@ -13,24 +13,23 @@
       <button class="register-btn active">Register</button>
       <button class="login-btn">Login</button>
     </div>
-    <div class="form-container" method="post">
-      <form action="#" method="post" class="login" style="display: none;">
+    <div class="form-container">
+      <form class="login" style="display: none;">
         <input type="email" name="email" id="email" placeholder="Email">
         <input type="password" name="pwd" id="pwd" placeholder="Password">
-        <input type="submit" value="Login">
+        <input type="submit" id="logSubmit" value="Login">
         <a href="#">Forgot Password?</a>
       </form>
-      <form action="#" method="post" class="register">
+      <form class="register">
         <div class="name-input">
           <input type="text" name="fname" id="fname" placeholder="First Name">
           <input type="text" name="lname" id="lname" placeholder="Last Name">
         </div>
         <input type="email" name="email" id="email" placeholder="Email">
         <input type="password" name="pwd" id="pwd" placeholder="Password">
-        <input type="submit" value="Register">
+        <input type="submit" id="regSubmit" value="Register">
       </form>
       <div class="error">
-        Bruh error here!!
       </div>
     </div>
   </div>
