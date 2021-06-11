@@ -1,7 +1,7 @@
 <?php
 $serverName ="localhost";//servername
 $user="root";
-$password="brav123";
+$password="123456";
 $dbName="notes-app-db";
 
 //Create connection
