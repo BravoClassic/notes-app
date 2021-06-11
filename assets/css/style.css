@@ -11,10 +11,11 @@ body {
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
   font-family: "Lato", sans-serif;
-  box-sizing: border-box;
+  font-size: 16px;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -58,6 +59,12 @@ button {
 .brand a img {
   width: 60px;
   height: 80px;
+}
+
+.brand{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .header-content nav ul {
@@ -135,7 +142,7 @@ button {
   transition: all 0.5s 0.5s ease;
 }
 
-.modal-overlay span {
+.modal-overlay span.close {
   position: absolute;
   top: 0;
   right: 0;
@@ -350,4 +357,43 @@ nav .nav-links a li {
 nav .nav-links a li:hover {
   background-color: #fff;
   color: #000;
+}
+
+
+.create-btn{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #eee;
+  padding: 0.1em;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* Profile Section */
+
+.display-details,.edit-details{
+  padding:1em;
+  width: 100%;
+}
+
+.edit-details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.display-details span.edit,.edit-details span.cancel{
+  padding: 1em;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
