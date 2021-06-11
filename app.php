@@ -34,4 +34,28 @@
     </div>
     <a href="#" class="create-btn"><i class="fa fa-plus"></i></a>
   </main>
+  <div class="modal-overlay">
+  <span class="close">close</span>
+  <div class="modal">
+    <div class="display-details">
+      <span class="edit">edit</span>
+      <h1>Name: <?php echo $_SESSION['fullname'];?></h1>
+      <h3>Email: <?php echo $_SESSION['email'];?></h3>
+      <h3>Password: ***</h3>
+      <p>Joined: <?php echo $_SESSION['datejoined']?></p>
+    </div>
+    <div class="edit-details hidden">
+    <span class="cancel">cancel</span>
+    <form class="register profile">
+        <div class="name-input">
+          <input type="text" name="fname" id="fname" placeholder="First Name">
+          <input type="text" name="lname" id="lname" placeholder="Last Name">
+        </div>
+        <input type="email" name="email" id="email" placeholder="Email">
+        <input type="password" name="pwd" id="pwd" placeholder="Password">
+        <input type="submit" id="regSubmit" value="Update">
+      </form>
+    </div>
+  </div>
+</div>
 <?php include 'footer.php'; ?>
