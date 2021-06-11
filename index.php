@@ -1,4 +1,8 @@
-<?php include 'header.php'; ?>
+<?php include 'header.php'; 
+if(isset($_SESSION['id'])){
+  header('location:app.php');
+}
+?>
 <main class="main-content">
   <div class="right-main">
     <h1>Online Notes App</h1>
@@ -15,8 +19,8 @@
     </div>
     <div class="form-container">
       <form class="login" style="display: none;">
-        <input type="email" name="email" id="email" placeholder="Email">
-        <input type="password" name="pwd" id="pwd" placeholder="Password">
+        <input type="email" name="emailLogin" id="emailLog" placeholder="Email">
+        <input type="password" name="pwdLogin" id="pwdLog" placeholder="Password">
         <input type="submit" id="logSubmit" value="Login">
         <a href="#">Forgot Password?</a>
       </form>
