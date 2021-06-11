@@ -1,8 +1,8 @@
 const button = document.querySelector(".form-options button"),
   regForm = document.querySelector(".register"),
+  logForm = document.querySelector(".login"),
   regSubmit = document.querySelector("#regSubmit"),
   logSubmit = document.querySelector("#logSubmit"),
-  logForm = document.querySelector(".login"),
   btnReg = document.querySelector(".register-btn"),
   btnLogin = document.querySelector(".login-btn"),
   closeBtn = document.querySelector(".modal-overlay span"),
@@ -54,7 +54,7 @@ regSubmit.addEventListener('click', () => {
     if (xhr.readyState == 4 && xhr.status == 200) {
         let data = xhr.response;
         if (data == "success") {
-          location.href('app.php');
+          location.href='app.php';
         } else {
           errorBox.textContent = data;
           errorBox.style.display = "block";
@@ -79,13 +79,13 @@ logSubmit.addEventListener('click', () => {
     if (xhr.readyState == 4 && xhr.status == 200) {
         let data = xhr.response;
         if (data == "success") {
-          location.href('app.php');
+          location.href='app.php';
         } else {
           errorBox.textContent = data;
           errorBox.style.display = "block";
         }
       }
   }
-  let formData = new FormData(regForm);
+  let formData = new FormData(logForm);
   xhr.send(formData);
 });
